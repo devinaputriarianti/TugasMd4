@@ -13,11 +13,11 @@ header {
     background-color: #4B0082;
     color: white;
     padding: 20px 0;
-    position: fixed;   /* Tambahkan properti ini */
-    width: 100%;       /* Agar header memenuhi lebar layar */
-    top: 0;            /* Posisikan di bagian atas */
+    position: fixed;   
+    width: 100%;       
+    top: 0;            
     left: 0;
-    z-index: 1000;     /* Z-index lebih tinggi untuk memastikan header di atas konten lainnya */
+    z-index: 1000;     
 }
 
 .header-container {
@@ -26,7 +26,7 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;   /* Tambahkan padding untuk menambah jarak */
+    padding: 0 20px;   
 }
 
 .logo {
@@ -76,7 +76,7 @@ nav ul li .button {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 150px 0 100px; /* Tambahkan padding atas untuk menghindari tumpang tindih */
+    padding: 150px 0 100px; 
 }
 
 .hero h2 {
@@ -394,34 +394,73 @@ nav ul li .button {
     color: white;
 }
 
-@media (max-width: 576px) {
-    header {
-        padding: 10px 0;
-    }
-
-    .header-container {
-        padding: 0 20px;
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: 28px;
     }
 
     nav ul li a {
         font-size: 16px;
     }
+}
 
-    .hero h2 {
-        font-size: 28px;
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero p {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: 50vh;
+        padding: 100px 20px 50px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content,
+    .sidebar {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .related-articles {
+        flex-direction: column;
+    }
+
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .article-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    nav ul li a {
         font-size: 14px;
     }
 
     .footer-column {
-        width: 100%; /* Kolom footer ditampilkan dalam satu baris */
-        margin-bottom: 20px;
+        flex: 1 1 100%;
+        text-align: center;
     }
 
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
+    .footer-column img {
+        margin-bottom: 10px;
     }
 }
