@@ -62,7 +62,7 @@ nav ul li .button {
     color: white;               
     border: 2px solid white;    
     text-decoration: none;      
-    font-weight:lighter;          
+    font-weight: lighter;          
 }
 
 .hero {
@@ -174,7 +174,7 @@ nav ul li .button {
 .category-box li {
     font-size: 16px;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .popular-artikel {
@@ -232,7 +232,7 @@ nav ul li .button {
 
 .new-artikel ul li a:hover {
     color: #007bff;
-    text-decoration: underline;
+    text-decoration: underline;
 }    
 
 .tag-box h3 {
@@ -250,7 +250,7 @@ nav ul li .button {
 
 .tag-box a:hover {
     color: #007bff;
-    text-decoration: underline;
+    text-decoration: underline;
 } 
 
 .tags {
@@ -275,7 +275,6 @@ nav ul li .button {
     width: 32px;
     height: 32px;
 }
-
 
 .related-articles {
     margin: 40px 0;
@@ -394,17 +393,8 @@ nav ul li .button {
     color: white;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         align-items: center;
@@ -412,29 +402,25 @@ nav ul li .button {
 
     nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
-    .nav ul li {
+    nav ul li {
         margin: 10px 0;
-    }
-
-    .hero {
-        height: 50vh;
-        padding: 100px 20px 50px;
     }
 
     .container {
         flex-direction: column;
     }
 
-    .main-content,
-    .sidebar {
-        flex: 1 1 100%;
+    .main-content {
+        width: 100%;
         margin-bottom: 20px;
     }
 
-    .related-articles {
-        flex-direction: column;
+    .sidebar {
+        width: 100%;
+        max-width: none;
     }
 
     .articles-container {
@@ -442,25 +428,50 @@ nav ul li .button {
     }
 
     .article-card {
+        width: 100%;
         margin-bottom: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 24px;
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 60px;
     }
 
-    nav ul li a {
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
         font-size: 14px;
     }
 
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer-column {
-        flex: 1 1 100%;
+        width: 100%;
         text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 16px;
     }
 
     .footer-column img {
-        margin-bottom: 10px;
+        width: 80px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
     }
 }
